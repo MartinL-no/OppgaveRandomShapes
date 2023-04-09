@@ -26,9 +26,12 @@ namespace RandomBoxes
         private static Shape[] CreateShapes()
         {
             var random = new Random();
-            var shapes = new Shape[5];
+            var shapes = new Shape[6];
+
             for (var i = 0; i < shapes.Length; i++)
             {
+                shapes[0] = new Text(random, _width, _height, "Hooray!");
+
                 if (random.Next(0, 2) == 0)
                     shapes[i] = new Rectangle(random, _width, _height);
                 else
